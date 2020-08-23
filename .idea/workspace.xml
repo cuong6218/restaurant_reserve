@@ -20,19 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="303d0ab4-bc4c-4512-9577-cb08fc5a34e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Repositories/TableRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/401.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout-sidenav-light.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout-static.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Services/TableService.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +165,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598154683638</updated>
       <workItem from="1598154684721" duration="699000" />
-      <workItem from="1598157378294" duration="741000" />
+      <workItem from="1598157378294" duration="1065000" />
     </task>
     <servers />
   </component>
@@ -197,6 +185,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog" timestamp="1598158442321">
+      <screen x="0" y="34" width="1600" height="990" />
+    </state>
+    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog/0.34.1600.990@0.34.1600.990" timestamp="1598158442321" />
     <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598155051815">
       <screen x="0" y="34" width="1600" height="990" />
     </state>

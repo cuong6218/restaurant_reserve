@@ -25,6 +25,10 @@ class TableRepository
     {
         $table->save();
     }
+    public function show($id)
+    {
+        return $this->table->findOrFail($id);
+    }
     public function destroy($id)
     {
         $this->table->destroy($id);
