@@ -41,7 +41,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->userService->store($request);
+        return redirect()->route('users.index');
     }
 
     /**
