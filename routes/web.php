@@ -32,4 +32,6 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/list-empty', 'TableController@showEmpty')->name('tables.showEmpty');
     });
     Route::resource('tables', 'TableController');
+
+    Route::resource('guests', 'GuestController');
 });

@@ -29,7 +29,7 @@
                                        <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}"><i class='fas fa-frown' style='font-size:24px'></i></a></span>
                                     </label>
                                     <label class="btn btn-success">
-                                        <span class="text-muted"><a href="{{route('tables.booking', $table->id)}}"><i class='fas fa-paper-plane' style='font-size:24px'></i></a></span>
+                                        <span class="text-muted"><a href="{{route('guests.create', $table->id)}}"><i class='fas fa-paper-plane' style='font-size:24px'></i></a></span>
                                     </label>
                                     <label class="btn btn-warning">
                                         <span class="text-muted"><a href="#"><i class='fab fa-btc' style='font-size:24px'></i></a></span>

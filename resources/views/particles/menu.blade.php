@@ -42,6 +42,11 @@
                         <div class="sb-nav-link-icon"><i class="cil-lemon"></i></div>
                         List table 2D
                     </a>
+                    <div class="sb-sidenav-menu-heading">Guest manager</div>
+                    <a class="nav-link" href="{{route('guests.index')}}">
+                        <div class="sb-nav-link-icon"><i class="far fa-user"></i></div>
+                        Guests
+                    </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
