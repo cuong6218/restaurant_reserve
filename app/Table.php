@@ -10,4 +10,8 @@ class Table extends Model
     {
         return $this->belongsToMany(Guest::class, 'table_guest', 'table_id', 'guest_id');
     }
+    public function dishes()
+    {
+        return $this->belongsToMany(Dish::class, 'table_dish', 'table_id', 'dish_id');
+    }
 }

@@ -23,19 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="303d0ab4-bc4c-4512-9577-cb08fc5a34e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dish.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DishController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DishController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/DishRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/DishRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/vi/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guests/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guests/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tables/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +195,7 @@
       <updated>1598154683638</updated>
       <workItem from="1598154684721" duration="699000" />
       <workItem from="1598157378294" duration="24976000" />
+      <workItem from="1598185984685" duration="4119000" />
     </task>
     <servers />
   </component>
@@ -218,18 +219,18 @@
       <screen x="0" y="34" width="1600" height="990" />
     </state>
     <state x="533" y="287" width="524" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.34.1600.990@0.34.1600.990" timestamp="1598181663093" />
-    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl" timestamp="1598159489109">
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl" timestamp="1598186250639">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl/0.34.1600.990@0.34.1600.990" timestamp="1598159489109" />
-    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog" timestamp="1598176649787">
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl/0.34.1600.990@0.34.1600.990" timestamp="1598186250639" />
+    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog" timestamp="1598187438113">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog/0.34.1600.990@0.34.1600.990" timestamp="1598176649787" />
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598182857388">
+    <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog/0.34.1600.990@0.34.1600.990" timestamp="1598187438113" />
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598190104266">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598182857388" />
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598190104266" />
     <state x="463" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1598171123796">
       <screen x="0" y="34" width="1600" height="990" />
     </state>

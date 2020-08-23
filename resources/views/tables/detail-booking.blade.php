@@ -19,7 +19,12 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse($table->guests as $key => $guest)
+                    @if($table->status == 'empty')
+                        <tr>
+                            <td>@lang('messages.no-data')</td>
+                        </tr>
+                    @else
+                    @foreach($table->guests as $key => $guest)
                         <tr>
                             <td>{{$key + 1}}</td>
                             <td>{{$guest->name}}</td>
@@ -28,11 +33,8 @@
                             <td>{{$guest->guest_number}}</td>
                             <td>{{$guest->booking_date}}</td>
                         </tr>
-                    @empty
-                        <tr>
-                            <td>@lang('messages.no-data')</td>
-                        </tr>
-                    @endforelse
+                    @endforeach
+                    @endif
                     </tbody>
                 </table>
             </div>

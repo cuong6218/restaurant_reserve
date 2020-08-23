@@ -30,7 +30,7 @@ class DishController extends Controller
      */
     public function create()
     {
-        //
+        return view('dishes.create');
     }
 
     /**
@@ -41,7 +41,8 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->dishService->store($request);
+        return redirect()->route('dishes.index');
     }
 
     /**
@@ -63,7 +64,8 @@ class DishController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dish = $this->dishService->show($id);
+        return view('dishes.edit', compact('dish'));
     }
 
     /**
@@ -75,7 +77,8 @@ class DishController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->dishService->update($request, $id);
+        return redirect()->route('dishes.index');
     }
 
     /**
@@ -86,6 +89,7 @@ class DishController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->dishService->destroy($id);
+        return redirect()->route('dishes.index');
     }
 }

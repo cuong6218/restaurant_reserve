@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\DishService;
 use App\Http\Services\TableService;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateTableRequest;
 class TableController extends Controller
 {
     protected $tableService;
-    public function __construct(TableService $tableService)
+    protected $dishService;
+    public function __construct(TableService $tableService,
+                                DishService $dishService)
     {
         $this->tableService = $tableService;
+        $this->dishService = $dishService;
     }
     /**
      * Display a listing of the resource.
@@ -53,8 +57,7 @@ class TableController extends Controller
      */
     public function show($id)
     {
-        $table = $this->tableService->show($id);
-        return view('tables.detail', compact('table'));
+        //
     }
 
     /**
@@ -102,8 +105,9 @@ class TableController extends Controller
     }
     public function seated($id)
     {
+        $dishes = $this->dishService->getAll();
         $this->tableService->seated($id);
-        return redirect()->route('tables.list');
+        return view('tables.add-dish', compact('dishes', 'id'));
     }
     public function empty($id)
     {
@@ -125,4 +129,20 @@ class TableController extends Controller
         $tables = $this->tableService->showEmpty();
         return view('tables.list', compact('tables'));
     }
+    public function addDish(Request $request, $id)
+    {
+        $this->tableService->addDish($request, $id);
+        return redirect()->route('tables.list');
+    }
+    public function detailSeated($id)
+    {
+        $table = $this->tableService->show($id);
+        return view('tables.detail-seated', compact('table'));
+    }
+    public function detailBooking($id)
+    {
+        $table = $this->tableService->show($id);
+        return view('tables.detail-booking', compact('table'));
+    }
+
 }

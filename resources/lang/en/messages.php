@@ -14,6 +14,16 @@
         'table-booking' => 'Booking',
         'form-add-table' => 'Form add table',
 
+        //dishes
+        'dish-list' => 'List dish',
+        'dish-name' => 'Name',
+        'dish-price' => 'Price',
+        'dish-add' => 'Add dish',
+        'form-add-dish' => 'Form add dish',
+        'form-update-dish' => 'Form update dish',
+
+
+
         //guests
         'guest-add' => 'Add guest',
         'guest-list' => 'List guest',

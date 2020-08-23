@@ -29,6 +29,7 @@
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="btn btn-danger"><span data-feather="trash-2"></span>&nbsp;@lang('messages.delete')</button>
                                 </form>
+                            </td>
                         </tr>
                     @empty
                         <tr>

@@ -74,4 +74,10 @@ class TableService
     {
         return $this->tableRepo->showEmpty();
     }
+    public function addDish($request,$id)
+    {
+        $table = $this->tableRepo->show($id);
+        $table->dishes()->sync($request->dish);
+    }
+
 }

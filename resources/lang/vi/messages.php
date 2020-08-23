@@ -15,6 +15,15 @@ return [
     'table-booking' => 'Đặt bàn',
     'form-add-table' => 'Form thêm bàn',
 
+    //dishes
+    'dish-list' => 'Danh sách món ăn',
+    'dish-name' => 'Tên món ăn',
+    'dish-price' => 'Giá tiền',
+    'dish-add' => 'Thêm món ăn',
+    'form-add-dish' => 'Form thêm món ăn',
+    'form-update-dish' => 'Form cập nhật thông tin món ăn',
+
+
     //guests
     'guest-add' => 'Thêm thực khách',
     'guest-list' => 'Danh sách thực khách',

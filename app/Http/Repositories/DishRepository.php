@@ -27,7 +27,7 @@ class DishRepository
     }
     public function show($id)
     {
-        return $this->dish->finhOrFail($id);
+        return $this->dish->findOrFail($id);
     }
     public function destroy($id)
     {

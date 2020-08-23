@@ -38,6 +38,9 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/list-booking', 'TableController@showBooking')->name('tables.showBooking');
         Route::get('/list-seated', 'TableController@showSeated')->name('tables.showSeated');
         Route::get('/list-empty', 'TableController@showEmpty')->name('tables.showEmpty');
+        Route::post('/{id}/add-dish', 'TableController@addDish')->name('tables.addDish');
+        Route::get('/{id}/detail-booking', 'TableController@detailBooking')->name('tables.detailBooking');
+        Route::get('/{id}/detail-seated', 'TableController@detailSeated')->name('tables.detailSeated');
     });
     Route::resource('tables', 'TableController');
 
