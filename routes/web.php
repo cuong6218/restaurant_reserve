@@ -25,5 +25,10 @@ Route::get('/login', function ()
 });
 Route::prefix('admin')->group(function ()
 {
+    Route::prefix('tables')->group(function ()
+    {
+        Route::get('/list', 'TableController@list')->name('tables.list');
+    });
+
     Route::resource('tables', 'TableController');
 });

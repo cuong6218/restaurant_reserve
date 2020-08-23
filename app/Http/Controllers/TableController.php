@@ -89,4 +89,9 @@ class TableController extends Controller
     {
         //
     }
+    public function list()
+    {
+        $tables = $this->tableService->getAll();
+        return view('tables.list', compact('tables'));
+    }
 }
