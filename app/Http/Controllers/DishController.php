@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\DishService;
 use Illuminate\Http\Request;
 
 class DishController extends Controller
 {
+    protected $dishService;
+    public function __construct(DishService $dishService)
+    {
+        $this->dishService = $dishService;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,8 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = $this->dishService->getDesc();
+        return view('dishes.index', compact('dishes'));
     }
 
     /**

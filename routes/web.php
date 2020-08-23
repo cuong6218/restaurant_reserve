@@ -50,4 +50,5 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
 //    Route::resource('guests', 'GuestController');
 
     Route::resource('users', 'UserController');
+    Route::resource('dishes', 'DishController');
 });

@@ -42,6 +42,10 @@
                         <div class="sb-nav-link-icon"><i class="cil-lemon"></i></div>
                         List table 2D
                     </a>
+                    <a class="nav-link" href="{{route('dishes.index')}}">
+                        <div class="sb-nav-link-icon"><i class="cis-fastfood"></i></div>
+                        Dishes
+                    </a>
                     <div class="sb-sidenav-menu-heading">Guest manager</div>
                     <a class="nav-link" href="{{route('guests.index')}}">
                         <div class="sb-nav-link-icon"><i class="far fa-user"></i></div>
