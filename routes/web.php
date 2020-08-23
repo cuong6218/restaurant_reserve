@@ -16,19 +16,14 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/login', function ()
+
+Route::middleware('checkLang')->prefix('admin')->group(function ()
 {
-    return view('login');
-});
-Route::prefix('admin')->group(function ()
-{
+    Route::get('/', 'LayoutController@index')->name('layout.index');
+    Route::get('/{locale}/change-language','LayoutController@changeLanguage');
     Route::prefix('tables')->group(function ()
     {
         Route::get('/list', 'TableController@list')->name('tables.list');
     });
-
     Route::resource('tables', 'TableController');
 });

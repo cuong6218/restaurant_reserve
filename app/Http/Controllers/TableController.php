@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\TableService;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\CreateTableRequest;
 class TableController extends Controller
 {
     protected $tableService;
@@ -39,7 +39,7 @@ class TableController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateTableRequest $request)
     {
         $this->tableService->store($request);
         return redirect()->route('tables.index');
@@ -74,7 +74,7 @@ class TableController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateTableRequest $request, $id)
     {
         //
     }
