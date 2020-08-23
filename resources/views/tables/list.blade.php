@@ -16,7 +16,8 @@
                     <div class="col-sm-6 col-lg-3 mb-3 float-left">
                         <div class="card ">
                             <div class="card-body bg-light">
-                                <div class="text-value-lg"><a href=""><i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a></div>
+                                <div class="text-value-lg"><a href="{{route('tables.show', $table->id)}}">
+                                        <i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a></div>
                                 <div>{{$table->status}}</div>
                                 <div class="progress progress-xs my-2">
 

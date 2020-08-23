@@ -53,7 +53,8 @@ class TableController extends Controller
      */
     public function show($id)
     {
-        //
+        $table = $this->tableService->show($id);
+        return view('tables.detail', compact('table'));
     }
 
     /**
