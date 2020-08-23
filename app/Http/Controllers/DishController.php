@@ -2,19 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\UserService;
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateUserRequest;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
 
-class UserController extends Controller
+class DishController extends Controller
 {
-    protected $userService;
-    public function __construct(UserService $userService)
-    {
-        $this->userService = $userService;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userService->getDesc();
-        return view('users.index', compact('users'));
+        //
     }
 
     /**
@@ -33,7 +23,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.register');
+        //
     }
 
     /**
@@ -42,10 +32,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateUserRequest $request)
+    public function store(Request $request)
     {
-        $this->userService->store($request);
-        return redirect()->route('users.showLogin');
+        //
     }
 
     /**
@@ -67,8 +56,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->userService->show($id);
-        return view('users.edit', compact('user'));
+        //
     }
 
     /**
@@ -78,10 +66,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateUserRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $this->userService->update($request, $id);
-        return redirect()->route('users.index');
+        //
     }
 
     /**
@@ -92,8 +79,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $this->userService->destroy($id);
-        return redirect()->route('users.index');
+        //
     }
-
 }

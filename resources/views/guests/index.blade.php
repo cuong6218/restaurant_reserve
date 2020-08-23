@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <div class="container">
-        <div class="card mb-4">
+        <div class="card mb-4 mt-3">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>
                 @lang('messages.guest-list')

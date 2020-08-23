@@ -2,8 +2,9 @@
 return [
     //basic
     'no-data' => 'Không có dữ liệu',
-    'delete' => 'Xóa',
     'update' => 'Cập nhật',
+    'delete' => 'Xóa',
+
 
     //tables
     'table' => 'Bàn',
@@ -29,5 +30,8 @@ return [
     'user-logout' => 'Thoát',
     'user-list' => 'Danh sách người dùng',
     'user-name' => 'Tên đăng nhập',
+    'user-password' => 'Mật khẩu',
     'user-email' => 'Thư điện tử',
+    'form-register' => 'Form Đăng ký',
+    'form-update-user' => 'Form cập nhật người dùng',
 ];

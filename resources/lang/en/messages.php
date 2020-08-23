@@ -29,6 +29,8 @@
         'user-logout' => 'Logout',
         'user-list' => 'List User',
         'user-name' => 'Username',
+        'user-password' => 'Password',
         'user-email' => 'Email',
-
+        'form-register' => 'Form Register',
+        'form-update-user' => 'Form Update User',
     ];

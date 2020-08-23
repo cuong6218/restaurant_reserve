@@ -19,8 +19,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('checkLang')->prefix('admin')->group(function ()
 {
+
     Route::get('/', 'LayoutController@index')->name('layout.index');
     Route::get('/{locale}/change-language','LayoutController@changeLanguage');
+    Route::prefix('login')->group(function ()
+    {
+        Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
+        Route::post('/show', 'AuthController@login')->name('auth.login');
+        Route::get('/logout', 'AuthController@logout')->name('auth.logout');
+    });
+
     Route::prefix('tables')->group(function ()
     {
         Route::get('/list', 'TableController@list')->name('tables.list');
@@ -40,10 +48,6 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::post('/{id}/store', 'GuestController@store')->name('guests.store');
     });
 //    Route::resource('guests', 'GuestController');
-    Route::prefix('users')->group(function ()
-    {
-        Route::get('/login', 'UserController@login')->name('users.login');
-    });
 
     Route::resource('users', 'UserController');
 });

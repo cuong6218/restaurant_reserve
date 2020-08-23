@@ -17,11 +17,20 @@
 <div id="logreg-forms">
     <form class="form-signin" method="post" action="{{route('users.store')}}">
         @csrf
-        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Register</h1>
-        <input type="text" name="name" value="{{old('name')}}" class="form-control mb-3" placeholder="Username" >
-        <input type="password" name="password" value="{{old('password')}}" id="inputPassword" class="form-control mb-3" placeholder="Password">
-        <input type="text" name="email" value="{{old('email')}}" id="inputEmail" class="form-control mb-3" placeholder="Email address" required="" autofocus="">
-        <button class="btn btn-success btn-block" type="submit"><i class="fas fa-user-plus"></i>  Register</button>
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> @lang('messages.form-register')</h1>
+        <input type="text" name="name" value="{{old('name')}}" class="form-control mb-3" placeholder="@lang('messages.user-name')" >
+        @if($errors->has('name'))
+            <p class="text-danger">{{$errors->first('name')}}</p>
+        @endif
+        <input type="password" name="password" value="{{old('password')}}" id="inputPassword" class="form-control mb-3" placeholder="@lang('messages.user-password')">
+        @if($errors->has('password'))
+            <p class="text-danger">{{$errors->first('name')}}</p>
+        @endif
+        <input type="text" name="email" value="{{old('email')}}" id="inputEmail" class="form-control mb-3" placeholder="@lang('messages.user-email')">
+        @if($errors->has('email'))
+            <p class="text-danger">{{$errors->first('email')}}</p>
+        @endif
+        <button class="btn btn-success btn-block" type="submit"><i class="fas fa-user-plus"></i>  @lang('messages.user-register')</button>
         <hr>
         <!-- <p>Don't have an account!</p>  -->
         <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-sign-in-alt"></i> Sign in instead</button>

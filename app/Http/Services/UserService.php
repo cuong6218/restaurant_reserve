@@ -30,11 +30,14 @@ class UserService
         $user->password = Hash::make($request->password);
         $this->userRepo->save($user);
     }
+    public function show($id)
+    {
+        return $this->userRepo->show($id);
+    }
     public function update($request, $id)
     {
         $user = $this->userRepo->show($id);
         $user->fill($request->all());
-        $user->password = Hash::make($request->password);
         $this->userRepo->save($user);
     }
     public function destroy($id)
