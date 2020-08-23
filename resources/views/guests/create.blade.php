@@ -4,7 +4,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>
-                @lang('messages.form-booking')
+                @lang('messages.form-booking') {{$table_id}}
             </div>
             <div class="card-body">
                 <form method="post" action="{{route('guests.store', $table_id)}}">
@@ -25,7 +25,7 @@
                     @endif
                     <div class="form-group">
                         <label>@lang('messages.guest-note')</label>
-                        <input type="text" name="note" value="{{old('note')}}" class="form-control" placeholder="@lang('messages.guest-note')">
+                        <textarea name="note" class="form-control" placeholder="@lang('messages.guest-note')">{{old('note')}}</textarea>
                     </div>
                     @if($errors->has('note'))
                         <p class="text-danger">{{$errors->first('note')}}</p>

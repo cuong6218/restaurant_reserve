@@ -1,6 +1,10 @@
 <?php
 return [
+    //basic
     'no-data' => 'Không có dữ liệu',
+    'delete' => 'Xóa',
+    'update' => 'Cập nhật',
+
     //tables
     'table' => 'Bàn',
     'table-add' => 'Thêm bàn',
@@ -19,4 +23,11 @@ return [
     'guest-number' => 'Số khách',
     'booking-date' => 'Ngày đặt bàn',
     'form-booking' => 'Form đặt bàn',
+
+    //users
+    'user-register' => 'Đăng ký',
+    'user-logout' => 'Thoát',
+    'user-list' => 'Danh sách người dùng',
+    'user-name' => 'Tên đăng nhập',
+    'user-email' => 'Thư điện tử',
 ];

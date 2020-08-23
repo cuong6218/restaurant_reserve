@@ -40,4 +40,10 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::post('/{id}/store', 'GuestController@store')->name('guests.store');
     });
 //    Route::resource('guests', 'GuestController');
+    Route::prefix('users')->group(function ()
+    {
+        Route::get('/login', 'UserController@login')->name('users.login');
+    });
+
+    Route::resource('users', 'UserController');
 });

@@ -1,6 +1,10 @@
 <?php
     return [
+        //basic
         'no-data' => 'No data',
+        'delete' => 'Delete',
+        'update' => 'Update',
+
         //tables
         'table' => 'Table',
         'table-add' => 'Add table',
@@ -19,4 +23,12 @@
         'guest-number' => 'Guest number',
         'booking-date' => 'Booking date',
         'form-booking' => 'Form booking',
+
+        //users
+        'user-register' => 'Register',
+        'user-logout' => 'Logout',
+        'user-list' => 'List User',
+        'user-name' => 'Username',
+        'user-email' => 'Email',
+
     ];

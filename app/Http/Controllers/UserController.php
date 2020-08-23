@@ -2,19 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\GuestService;
-use App\Http\Services\TableService;
+use App\Http\Services\UserService;
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateGuestRequest;
-class GuestController extends Controller
+
+class UserController extends Controller
 {
-    protected $guestService;
-    protected $tableService;
-    public function __construct(GuestService $guestService,
-                                TableService $tableService)
+    protected $userService;
+    public function __construct(UserService $userService)
     {
-        $this->guestService = $guestService;
-        $this->tableService = $tableService;
+        $this->userService = $userService;
     }
     /**
      * Display a listing of the resource.
@@ -23,8 +19,8 @@ class GuestController extends Controller
      */
     public function index()
     {
-        $guests = $this->guestService->getDesc();
-        return view('guests.index', compact('guests'));
+        $users = $this->userService->getDesc();
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -32,12 +28,9 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        $table = $this->tableService->show($id);
-        $table_id = $table->id;
-        $this->tableService->booking($id);
-        return view('guests.create', compact('table_id'));
+        return view('users.register');
     }
 
     /**
@@ -46,10 +39,9 @@ class GuestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateGuestRequest $request, $table_id)
+    public function store(Request $request)
     {
-        $this->guestService->store($request, $table_id);
-        return redirect()->route('tables.list');
+        //
     }
 
     /**
@@ -81,7 +73,7 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateGuestRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -95,5 +87,9 @@ class GuestController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function login()
+    {
+        return view('users.login');
     }
 }

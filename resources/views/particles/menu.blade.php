@@ -33,7 +33,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Dashboard
                     </a>
-                    <div class="sb-sidenav-menu-heading">Manager</div>
+                    <div class="sb-sidenav-menu-heading">Table manager</div>
                     <a class="nav-link" href="{{route('tables.index')}}">
                         <div class="sb-nav-link-icon"><i class="cil-pizza"></i></div>
                         Tables
@@ -46,6 +46,11 @@
                     <a class="nav-link" href="{{route('guests.index')}}">
                         <div class="sb-nav-link-icon"><i class="far fa-user"></i></div>
                         Guests
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Staff manager</div>
+                    <a class="nav-link" href="{{route('users.index')}}">
+                        <div class="sb-nav-link-icon"><i class="far fa-user"></i></div>
+                        Users
                     </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
