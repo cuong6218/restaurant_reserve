@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\TableService;
 use Illuminate\Http\Request;
 
 class TableController extends Controller
 {
+    protected $tableService;
+    public function __construct(TableService $tableService)
+    {
+        $this->tableService = $tableService;
+    }
     /**
      * Display a listing of the resource.
      *
