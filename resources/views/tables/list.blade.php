@@ -14,8 +14,8 @@
                                 <div class="text-value-lg"><i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a></div>
                                 <div>{{$table->status}}</div>
                                 <div class="progress progress-xs my-2">
-                                </div><span class="text-muted"><a href="">Seated |</a> </span>
-                                <span class="text-muted"><a href="">Empty</a> </span>
+                                </div><span class="text-muted"><a href="{{route('tables.seated', $table->id)}}">Seated |</a> </span>
+                                <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}">Empty</a> </span>
                             </div>
                         </div>
                     </div>

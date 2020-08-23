@@ -44,4 +44,22 @@ class TableService
     {
         $this->tableRepo->destroy($id);
     }
+    public function booking($id)
+    {
+        $table = $this->tableRepo->show($id);
+        $table->status = 'booking';
+        $this->tableRepo->save($table);
+    }
+    public function seated($id)
+    {
+        $table = $this->tableRepo->show($id);
+        $table->status = 'seated';
+        $this->tableRepo->save($table);
+    }
+    public function empty($id)
+    {
+        $table = $this->tableRepo->show($id);
+        $table->status = 'empty';
+        $this->tableRepo->save($table);
+    }
 }

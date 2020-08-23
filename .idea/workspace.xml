@@ -25,12 +25,7 @@
     <list default="true" id="303d0ab4-bc4c-4512-9577-cb08fc5a34e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/vi/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/TableService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/TableService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/tables/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -177,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598154683638</updated>
       <workItem from="1598154684721" duration="699000" />
-      <workItem from="1598157378294" duration="6995000" />
+      <workItem from="1598157378294" duration="7713000" />
     </task>
     <servers />
   </component>

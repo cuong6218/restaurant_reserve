@@ -94,4 +94,19 @@ class TableController extends Controller
         $tables = $this->tableService->getAll();
         return view('tables.list', compact('tables'));
     }
+    public function booking($id)
+    {
+        $this->tableService->booking($id);
+        return redirect()->route('tables.list');
+    }
+    public function seated($id)
+    {
+        $this->tableService->seated($id);
+        return redirect()->route('tables.list');
+    }
+    public function empty($id)
+    {
+        $this->tableService->empty($id);
+        return redirect()->route('tables.list');
+    }
 }
