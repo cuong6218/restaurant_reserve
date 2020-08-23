@@ -19,7 +19,8 @@ class TableController extends Controller
      */
     public function index()
     {
-        //
+        $tables = $this->tableService->getDesc();
+        return view('tables.index', compact('tables'));
     }
 
     /**
@@ -29,7 +30,7 @@ class TableController extends Controller
      */
     public function create()
     {
-        //
+        return view('tables.create');
     }
 
     /**
@@ -40,7 +41,8 @@ class TableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->tableService->store($request);
+        return redirect()->route('tables.index');
     }
 
     /**

@@ -23,3 +23,7 @@ Route::get('/login', function ()
 {
     return view('login');
 });
+Route::prefix('admin')->group(function ()
+{
+    Route::resource('tables', 'TableController');
+});

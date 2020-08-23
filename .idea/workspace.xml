@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="303d0ab4-bc4c-4512-9577-cb08fc5a34e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/vi/messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/particles/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tables/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/particles/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tables/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +160,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel_library" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -165,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598154683638</updated>
       <workItem from="1598154684721" duration="699000" />
-      <workItem from="1598157378294" duration="1492000" />
+      <workItem from="1598157378294" duration="3210000" />
     </task>
     <servers />
   </component>
@@ -185,13 +198,21 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl" timestamp="1598159489109">
+      <screen x="0" y="34" width="1600" height="990" />
+    </state>
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl/0.34.1600.990@0.34.1600.990" timestamp="1598159489109" />
     <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog" timestamp="1598158442321">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
     <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog/0.34.1600.990@0.34.1600.990" timestamp="1598158442321" />
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598158868798">
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598159989527">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598158868798" />
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598159989527" />
+    <state x="463" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1598159662870">
+      <screen x="0" y="34" width="1600" height="990" />
+    </state>
+    <state x="463" y="250" width="672" height="678" key="search.everywhere.popup/0.34.1600.990@0.34.1600.990" timestamp="1598159662870" />
   </component>
 </project>
