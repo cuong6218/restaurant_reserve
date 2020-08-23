@@ -22,12 +22,12 @@ class GuestService
     {
         return $this->guestRepo->getDesc();
     }
-    public function store($request)
+    public function store($request, $table_id)
     {
         $guest = new Guest();
         $guest->fill($request->all());
         $this->guestRepo->save($guest);
-        $guest->tables()->sync($request->table_id);
+        $guest->tables()->sync($table_id);
     }
     public function show($id)
     {

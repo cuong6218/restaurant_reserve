@@ -34,8 +34,10 @@ class GuestController extends Controller
      */
     public function create($id)
     {
+        $table = $this->tableService->show($id);
+        $table_id = $table->id;
         $this->tableService->booking($id);
-        return view('guests.create');
+        return view('guests.create', compact('table_id'));
     }
 
     /**
@@ -44,9 +46,9 @@ class GuestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $table_id)
     {
-        $this->guestService->store($request);
+        $this->guestService->store($request, $table_id);
         return redirect()->route('tables.list');
     }
 

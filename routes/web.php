@@ -37,7 +37,7 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
     {
         Route::get('/', 'GuestController@index')->name('guests.index');
         Route::get('/{id}/create', 'GuestController@create')->name('guests.create');
-        Route::post('/store', 'GuestController@store')->name('guests.store');
+        Route::post('/{id}/store', 'GuestController@store')->name('guests.store');
     });
 //    Route::resource('guests', 'GuestController');
 });

@@ -7,7 +7,7 @@
                 @lang('messages.form-booking')
             </div>
             <div class="card-body">
-                <form method="post" action="{{route('guests.store')}}">
+                <form method="post" action="{{route('guests.store', $table_id)}}">
                     @csrf
                     <div class="form-group">
                         <label>@lang('messages.guest-name')</label>
