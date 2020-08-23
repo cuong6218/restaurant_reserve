@@ -5,6 +5,7 @@ namespace App\Http\Repositories;
 
 
 use App\Table;
+use Illuminate\Support\Facades\DB;
 
 class TableRepository
 {
@@ -32,5 +33,17 @@ class TableRepository
     public function destroy($id)
     {
         $this->table->destroy($id);
+    }
+    public function showBooking()
+    {
+        return DB::table('tables')->where('status', 'booking')->get();
+    }
+    public function showSeated()
+    {
+        return DB::table('tables')->where('status', 'seated')->get();
+    }
+    public function showEmpty()
+    {
+        return DB::table('tables')->where('status', 'empty')->get();
     }
 }

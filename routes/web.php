@@ -27,6 +27,9 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/{id}/booking', 'TableController@booking')->name('tables.booking');
         Route::get('/{id}/seated', 'TableController@seated')->name('tables.seated');
         Route::get('/{id}/empty', 'TableController@empty')->name('tables.empty');
+        Route::get('/list-booking', 'TableController@showBooking')->name('tables.showBooking');
+        Route::get('/list-seated', 'TableController@showSeated')->name('tables.showSeated');
+        Route::get('/list-empty', 'TableController@showEmpty')->name('tables.showEmpty');
     });
     Route::resource('tables', 'TableController');
 });

@@ -62,4 +62,16 @@ class TableService
         $table->status = 'empty';
         $this->tableRepo->save($table);
     }
+    public function showBooking()
+    {
+        return $this->tableRepo->showBooking();
+    }
+    public function showSeated()
+    {
+        return $this->tableRepo->showSeated();
+    }
+    public function showEmpty()
+    {
+        return $this->tableRepo->showEmpty();
+    }
 }

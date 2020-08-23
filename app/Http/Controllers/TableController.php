@@ -109,4 +109,19 @@ class TableController extends Controller
         $this->tableService->empty($id);
         return redirect()->route('tables.list');
     }
+    public function showBooking()
+    {
+        $tables = $this->tableService->showBooking();
+        return view('tables.list', compact('tables'));
+    }
+    public function showSeated()
+    {
+        $tables = $this->tableService->showSeated();
+        return view('tables.list', compact('tables'));
+    }
+    public function showEmpty()
+    {
+        $tables = $this->tableService->showEmpty();
+        return view('tables.list', compact('tables'));
+    }
 }

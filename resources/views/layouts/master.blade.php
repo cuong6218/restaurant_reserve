@@ -8,6 +8,7 @@
     <title>Document</title>
     <base href="{{asset('')}}">
     <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tables.css">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
 
@@ -26,5 +27,6 @@
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/datatables-demo.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>
 </html>
