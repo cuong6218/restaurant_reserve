@@ -32,8 +32,9 @@ class GuestController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
+        $this->tableService->booking($id);
         return view('guests.create');
     }
 

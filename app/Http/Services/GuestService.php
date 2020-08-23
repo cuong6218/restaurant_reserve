@@ -27,6 +27,7 @@ class GuestService
         $guest = new Guest();
         $guest->fill($request->all());
         $this->guestRepo->save($guest);
+        $guest->tables()->sync($request->table_id);
     }
     public function show($id)
     {

@@ -16,16 +16,16 @@
                     <div class="col-sm-6 col-lg-3 mb-3 float-left">
                         <div class="card ">
                             <div class="card-body bg-light">
-                                <div class="text-value-lg"><i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a></div>
+                                <div class="text-value-lg"><a href=""><i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a></div>
                                 <div>{{$table->status}}</div>
                                 <div class="progress progress-xs my-2">
 
                                 </div>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-light active">
+                                    <label class="btn btn-info">
                                         <span class="text-muted"><a href="{{route('tables.seated', $table->id)}}"><i class='fas fa-utensils' style='font-size:24px'></i></a> </span>
                                     </label>
-                                    <label class="btn btn-info">
+                                    <label class="btn btn-light">
                                        <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}"><i class='fas fa-frown' style='font-size:24px'></i></a></span>
                                     </label>
                                     <label class="btn btn-success">

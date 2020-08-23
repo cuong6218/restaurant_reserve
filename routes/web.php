@@ -33,5 +33,11 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
     });
     Route::resource('tables', 'TableController');
 
-    Route::resource('guests', 'GuestController');
+    Route::prefix('guests')->group(function ()
+    {
+        Route::get('/', 'GuestController@index')->name('guests.index');
+        Route::get('/{id}/create', 'GuestController@create')->name('guests.create');
+        Route::post('/store', 'GuestController@store')->name('guests.store');
+    });
+//    Route::resource('guests', 'GuestController');
 });
