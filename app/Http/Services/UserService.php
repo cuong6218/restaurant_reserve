@@ -6,6 +6,7 @@ namespace App\Http\Services;
 
 use App\Http\Repositories\UserRepository;
 use App\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserService
 {
@@ -26,12 +27,14 @@ class UserService
     {
         $user = new User();
         $user->fill($request->all());
+        $user->password = Hash::make($request->password);
         $this->userRepo->save($user);
     }
     public function update($request, $id)
     {
         $user = $this->userRepo->show($id);
         $user->fill($request->all());
+        $user->password = Hash::make($request->password);
         $this->userRepo->save($user);
     }
     public function destroy($id)
