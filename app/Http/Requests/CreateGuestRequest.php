@@ -23,11 +23,14 @@ class CreateGuestRequest extends FormRequest
      */
     public function rules()
     {
+
         return [
             'name' => 'required',
             'phone' => 'required|numeric',
             'guest_number' => 'required|numeric',
-            'booking_date' => 'required'
+            'booking_date' => 'required',
+            'time_start' => 'required',
+//            'time_end' => 'after:time_start',
         ];
     }
 }

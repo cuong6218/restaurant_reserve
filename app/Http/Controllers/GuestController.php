@@ -6,6 +6,8 @@ use App\Http\Services\GuestService;
 use App\Http\Services\TableService;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateGuestRequest;
+use Illuminate\Support\Facades\DB;
+
 class GuestController extends Controller
 {
     protected $guestService;
@@ -35,9 +37,7 @@ class GuestController extends Controller
     public function create($id)
     {
         $table = $this->tableService->show($id);
-        $table_id = $table->id;
-        $this->tableService->booking($id);
-        return view('guests.create', compact('table_id'));
+        return view('guests.create', compact('table'));
     }
 
     /**
@@ -46,8 +46,11 @@ class GuestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateGuestRequest $request, $table_id)
+    public function store(CreateGuestRequest $request, $id)
     {
+        $table = $this->tableService->show($id);
+        $table_id = $table->id;
+        $this->tableService->booking($id);
         $this->guestService->store($request, $table_id);
         return redirect()->route('tables.list');
     }
@@ -96,7 +99,13 @@ class GuestController extends Controller
      */
     public function destroy($id, $table_id)
     {
-        $this->tableService->empty($table_id);
+//        $guest = $this->guestService->getAll()->lastest();
+//        $this->tableService->show($table_id);
+        $guest = DB::table('guests')->latest()->first();
+        if(!$guest)
+        {
+            $this->tableService->empty($table_id);
+        }
         $this->guestService->destroy($id);
         return redirect()->route('tables.list');
     }

@@ -19,7 +19,8 @@ class GuestRepository
     }
     public function getDesc()
     {
-        return $this->guest->select('*')->orderBy('id', 'desc')->paginate(5);
+        return Guest::withTrashed()->paginate(5);
+//        return $this->guest->select('*')->orderBy('id', 'desc')->paginate(5);
     }
     public function save($guest)
     {

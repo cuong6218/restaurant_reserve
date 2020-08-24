@@ -33,6 +33,7 @@ class GuestService
             $time_start = Carbon::parse($request->time_start);
             $guest->time_end = $time_start->addHour(2);
         }
+
         $this->guestRepo->save($guest);
         $guest->tables()->sync($table_id);
     }

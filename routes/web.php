@@ -46,6 +46,7 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/{id}/edit', 'GuestController@edit')->name('guests.edit');
         Route::post('/{id}/update', 'GuestController@update')->name('guests.update');
     });
+
 //    Route::resource('guests', 'GuestController');
 
     Route::resource('users', 'UserController');

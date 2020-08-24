@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\DishService;
+use App\Http\Services\GuestService;
 use App\Http\Services\TableService;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateTableRequest;
@@ -12,11 +13,14 @@ class TableController extends Controller
 {
     protected $tableService;
     protected $dishService;
+    protected $guestService;
     public function __construct(TableService $tableService,
-                                DishService $dishService)
+                                DishService $dishService,
+                                GuestService $guestService)
     {
         $this->tableService = $tableService;
         $this->dishService = $dishService;
+        $this->guestService = $guestService;
     }
     /**
      * Display a listing of the resource.
@@ -98,8 +102,9 @@ class TableController extends Controller
     }
     public function list()
     {
+        $guests = $this->guestService->getAll();
         $tables = $this->tableService->getAll();
-        return view('tables.list', compact('tables'));
+        return view('tables.list', compact('tables', 'guests'));
     }
     public function showBooking()
     {

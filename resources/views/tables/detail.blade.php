@@ -1,7 +1,9 @@
 @extends('layouts.master1')
 @section('content')
 <div class="container-fluid">
+    <div class="mt-3 mb-3">
         <a href="{{route('guests.create', $table->id)}}" class="btn btn-success">Booking</a>
+    </div>
         <div class="card">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>

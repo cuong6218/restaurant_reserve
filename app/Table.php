@@ -14,4 +14,6 @@ class Table extends Model
     {
         return $this->belongsToMany(Dish::class, 'table_dish', 'table_id', 'dish_id');
     }
+
+
 }
