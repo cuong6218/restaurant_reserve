@@ -33,6 +33,8 @@ return [
     'guest-note' => 'Ghi chú',
     'guest-number' => 'Số khách',
     'booking-date' => 'Ngày đặt bàn',
+    'time_start' => 'Thời gian bắt đầu',
+    'time_end' => 'Thời gian kết thúc',
     'form-booking' => 'Form đặt bàn',
     'guest-booking' => 'Danh sách thực khách đặt bàn',
     'form-update-guest' => 'Form cập nhật thực khách',

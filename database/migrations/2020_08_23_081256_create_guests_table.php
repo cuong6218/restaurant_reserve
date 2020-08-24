@@ -19,8 +19,11 @@ class CreateGuestsTable extends Migration
             $table->string('phone');
             $table->string('note')->nullable();
             $table->integer('guest_number');
-            $table->dateTime('booking_date');
+            $table->date('booking_date');
+            $table->time('time_start');
+            $table->time('time_end');
             $table->string('status');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

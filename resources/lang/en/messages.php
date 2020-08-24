@@ -34,6 +34,8 @@
         'guest-note' => 'Note',
         'guest-number' => 'Guest number',
         'booking-date' => 'Booking date',
+        'time_start' => 'Time start',
+        'time_end' => 'Time end',
         'form-booking' => 'Form booking',
         'guest-booking' => 'List booking guest',
         'form-update-guest' => 'Form update guest',

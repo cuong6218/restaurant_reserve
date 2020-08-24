@@ -15,6 +15,9 @@
                             <i class="fas fa-table mr-1"></i>
                             Table
                         </div>
+                        <div class="dropdown-menu">
+                            <span>column configuration</span>
+                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" width="100%" cellspacing="0">
@@ -26,6 +29,8 @@
                                         <th>@lang('messages.guest-note')</th>
                                         <th>@lang('messages.guest-number')</th>
                                         <th>@lang('messages.booking-date')</th>
+                                        <th>@lang('messages.time_start')</th>
+                                        <th>@lang('messages.time_end')</th>
                                         <th>@lang('messages.status')</th>
                                         <th></th>
                                     </tr>
@@ -39,6 +44,8 @@
                                             <td>{{$guest->note}}</td>
                                             <td>{{$guest->guest_number}}</td>
                                             <td>{{$guest->booking_date}}</td>
+                                            <td>{{$guest->time_start}}</td>
+                                            <td>{{$guest->time_end}}</td>
                                             <td>{{$guest->status}}</td>
                                             <td><a class="btn btn-success" href="{{route('guests.edit', $guest->id)}}">@lang('messages.update')</a> </td>
                                             {{--                            <td><a class="btn btn-danger" href="{{route('guests.destroy', $guest->id)}}">@lang('messages.cancel')</a> </td>--}}

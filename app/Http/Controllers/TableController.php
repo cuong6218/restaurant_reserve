@@ -101,6 +101,22 @@ class TableController extends Controller
         $tables = $this->tableService->getAll();
         return view('tables.list', compact('tables'));
     }
+    public function showBooking()
+    {
+        $tables = $this->tableService->showBooking();
+        return view('tables.list', compact('tables'));
+    }
+    public function showSeated()
+    {
+        $tables = $this->tableService->showSeated();
+        return view('tables.list', compact('tables'));
+    }
+    public function showEmpty()
+    {
+        $tables = $this->tableService->showEmpty();
+        return view('tables.list', compact('tables'));
+    }
+
     public function booking($id)
     {
         $this->tableService->booking($id);
@@ -117,21 +133,7 @@ class TableController extends Controller
         $this->tableService->empty($id);
         return redirect()->route('tables.list');
     }
-    public function showBooking()
-    {
-        $tables = $this->tableService->showBooking();
-        return view('tables.list', compact('tables'));
-    }
-    public function showSeated()
-    {
-        $tables = $this->tableService->showSeated();
-        return view('tables.list', compact('tables'));
-    }
-    public function showEmpty()
-    {
-        $tables = $this->tableService->showEmpty();
-        return view('tables.list', compact('tables'));
-    }
+
     public function addDish(Request $request, $id)
     {
         $this->tableService->addDish($request, $id);

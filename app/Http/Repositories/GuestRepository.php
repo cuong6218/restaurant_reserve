@@ -30,9 +30,10 @@ class GuestRepository
         return $this->guest->findOrFail($id);
     }
 
-//    public function destroy($id)
-//    {
-//        $guest = $this->guest->find($id);
-//        $guest->status = 'canceled';
-//    }
+    public function destroy($id)
+    {
+        $guest = Guest::find($id);
+        $guest->status = 'canceled';
+        $guest->delete();
+    }
 }

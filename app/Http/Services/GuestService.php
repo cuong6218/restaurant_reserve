@@ -6,6 +6,7 @@ namespace App\Http\Services;
 
 use App\Guest;
 use App\Http\Repositories\GuestRepository;
+use Carbon\Carbon;
 
 class GuestService
 {
@@ -27,6 +28,11 @@ class GuestService
         $guest = new Guest();
         $guest->fill($request->all());
         $guest->status = 'booking';
+        if (!$request->time_end)
+        {
+            $time_start = Carbon::parse($request->time_start);
+            $guest->time_end = $time_start->addHour(2);
+        }
         $this->guestRepo->save($guest);
         $guest->tables()->sync($table_id);
     }
@@ -44,8 +50,6 @@ class GuestService
 
     public function destroy($id)
     {
-        $table = $this->guestRepo->show($id);
-        $table->status = 'canceled';
-        $this->guestRepo->save($table);
+       $this->guestRepo->destroy($id);
     }
 }

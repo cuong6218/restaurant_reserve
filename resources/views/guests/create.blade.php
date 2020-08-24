@@ -39,10 +39,24 @@
                     @endif
                     <div class="form-group">
                         <label>@lang('messages.booking-date')</label>
-                        <input type="datetime-local" name="booking_date" value="{{old('booking_date')}}" class="form-control"">
+                        <input type="date" name="booking_date" value="{{old('booking_date')}}" class="form-control">
                     </div>
                     @if($errors->has('booking_date'))
                         <p class="text-danger">{{$errors->first('booking_date')}}</p>
+                    @endif
+                    <div class="form-group">
+                        <label>@lang('messages.time_start')</label>
+                        <input type="time" name="time_start" value="{{old('time_start')}}" class="form-control">
+                    </div>
+                    @if($errors->has('time_start'))
+                        <p class="text-danger">{{$errors->first('time_start')}}</p>
+                    @endif
+                    <div class="form-group">
+                        <label>@lang('messages.time_end')</label>
+                        <input type="time" name="time_end" value="{{old('time_end')}}" class="form-control">
+                    </div>
+                    @if($errors->has('time_end'))
+                        <p class="text-danger">{{$errors->first('time_end')}}</p>
                     @endif
                     <button type="submit" class="btn btn-primary">@lang('messages.table-booking')</button>
                 </form>
