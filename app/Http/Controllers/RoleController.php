@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\UserService;
+use App\Http\Services\RoleService;
 use Illuminate\Http\Request;
-use App\Http\Requests\CreateUserRequest;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
 
-class UserController extends Controller
+class RoleController extends Controller
 {
-    protected $userService;
-    public function __construct(UserService $userService)
+    protected $roleService;
+    public function __construct(RoleService $roleService)
     {
-        $this->userService = $userService;
+        $this->roleService = $roleService;
     }
     /**
      * Display a listing of the resource.
@@ -22,8 +19,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = $this->userService->getDesc();
-        return view('users.index', compact('users'));
+        $roles = $this->roleService->getAll();
+        return view('roles.index', compact('roles'));
     }
 
     /**
@@ -33,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.register');
+        return view('roles.create');
     }
 
     /**
@@ -42,10 +39,10 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CreateUserRequest $request)
+    public function store(Request $request)
     {
-        $this->userService->store($request);
-        return redirect()->route('auth.showLogin');
+        $this->roleService->store($request);
+        return redirect()->route('roles.index');
     }
 
     /**
@@ -67,8 +64,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = $this->userService->show($id);
-        return view('users.edit', compact('user'));
+        $role = $this->roleService->show($id);
+        return view('roles.edit', compact('role'));
     }
 
     /**
@@ -78,10 +75,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CreateUserRequest $request, $id)
+    public function update(Request $request, $id)
     {
-        $this->userService->update($request, $id);
-        return redirect()->route('users.index');
+        $this->roleService->update($request, $id);
+        return redirect()->route('roles.index');
     }
 
     /**
@@ -92,8 +89,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $this->userService->destroy($id);
-        return redirect()->route('users.index');
+        $this->roleService->destroy($id);
+        return redirect()->route('roles.index');
     }
-
 }

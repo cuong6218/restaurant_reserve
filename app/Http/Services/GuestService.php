@@ -26,6 +26,7 @@ class GuestService
     {
         $guest = new Guest();
         $guest->fill($request->all());
+        $guest->status = 'booking';
         $this->guestRepo->save($guest);
         $guest->tables()->sync($table_id);
     }
@@ -37,10 +38,14 @@ class GuestService
     {
         $guest = $this->guestRepo->show($id);
         $guest->fill($request->all());
+
         $this->guestRepo->save($guest);
     }
+
     public function destroy($id)
     {
-        $this->guestRepo->destroy($id);
+        $table = $this->guestRepo->show($id);
+        $table->status = 'canceled';
+        $this->guestRepo->save($table);
     }
 }

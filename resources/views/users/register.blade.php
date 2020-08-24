@@ -33,7 +33,7 @@
         <button class="btn btn-success btn-block" type="submit"><i class="fas fa-user-plus"></i>  @lang('messages.user-register')</button>
         <hr>
         <!-- <p>Don't have an account!</p>  -->
-        <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-sign-in-alt"></i> Sign in instead</button>
+        <a href="{{route('auth.showLogin')}}" class="btn btn-primary text-light" type="button" id="btn-signup"><i class="fas fa-sign-in-alt"></i> Sign in instead</a>
     </form>
     <br>
 

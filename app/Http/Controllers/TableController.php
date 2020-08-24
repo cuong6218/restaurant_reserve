@@ -6,6 +6,8 @@ use App\Http\Services\DishService;
 use App\Http\Services\TableService;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateTableRequest;
+use Illuminate\Support\Facades\Redirect;
+
 class TableController extends Controller
 {
     protected $tableService;
@@ -57,7 +59,8 @@ class TableController extends Controller
      */
     public function show($id)
     {
-        //
+        $table = $this->tableService->show($id);
+        return view('tables.detail', compact('table'));
     }
 
     /**
@@ -134,15 +137,4 @@ class TableController extends Controller
         $this->tableService->addDish($request, $id);
         return redirect()->route('tables.list');
     }
-    public function detailSeated($id)
-    {
-        $table = $this->tableService->show($id);
-        return view('tables.detail-seated', compact('table'));
-    }
-    public function detailBooking($id)
-    {
-        $table = $this->tableService->show($id);
-        return view('tables.detail-booking', compact('table'));
-    }
-
 }

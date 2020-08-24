@@ -4,13 +4,14 @@
         'no-data' => 'No data',
         'delete' => 'Delete',
         'update' => 'Update',
-
+        'cancel' => 'Cancel',
+        'status' => 'Status',
         //tables
         'table' => 'Table',
         'table-add' => 'Add table',
         'table-list' => 'List table',
         'table-name' => 'Name',
-        'table-status' => 'Status',
+
         'table-booking' => 'Booking',
         'form-add-table' => 'Form add table',
 
@@ -26,6 +27,7 @@
 
         //guests
         'guest-add' => 'Add guest',
+        'guest-update' => 'Update guest',
         'guest-list' => 'List guest',
         'guest-name' => 'Name',
         'guest-phone' => 'Phone',
@@ -33,6 +35,10 @@
         'guest-number' => 'Guest number',
         'booking-date' => 'Booking date',
         'form-booking' => 'Form booking',
+        'guest-booking' => 'List booking guest',
+        'form-update-guest' => 'Form update guest',
+
+
 
         //users
         'user-register' => 'Register',
@@ -43,4 +49,10 @@
         'user-email' => 'Email',
         'form-register' => 'Form Register',
         'form-update-user' => 'Form Update User',
+
+        //roles
+        'role-add' => 'Add role',
+        'role-list' => 'List role',
+        'role-name' => 'name',
+        'form-add-role' => 'Form add role',
     ];

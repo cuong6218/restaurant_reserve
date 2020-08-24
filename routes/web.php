@@ -16,18 +16,13 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-
+Route::get('/login-form', 'AuthController@showLogin')->name('auth.showLogin');
+Route::post('/login', 'AuthController@login')->name('auth.login');
+Route::get('/logout', 'AuthController@logout')->name('auth.logout');
 Route::middleware('checkLang')->prefix('admin')->group(function ()
 {
-
-    Route::get('/', 'LayoutController@index')->name('layout.index');
+    Route::middleware('auth')->get('/', 'LayoutController@index')->name('layout.index');
     Route::get('/{locale}/change-language','LayoutController@changeLanguage');
-    Route::prefix('login')->group(function ()
-    {
-        Route::get('/', 'AuthController@showLogin')->name('auth.showLogin');
-        Route::post('/show', 'AuthController@login')->name('auth.login');
-        Route::get('/logout', 'AuthController@logout')->name('auth.logout');
-    });
 
     Route::prefix('tables')->group(function ()
     {
@@ -39,8 +34,6 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/list-seated', 'TableController@showSeated')->name('tables.showSeated');
         Route::get('/list-empty', 'TableController@showEmpty')->name('tables.showEmpty');
         Route::post('/{id}/add-dish', 'TableController@addDish')->name('tables.addDish');
-        Route::get('/{id}/detail-booking', 'TableController@detailBooking')->name('tables.detailBooking');
-        Route::get('/{id}/detail-seated', 'TableController@detailSeated')->name('tables.detailSeated');
     });
     Route::resource('tables', 'TableController');
 
@@ -49,9 +42,14 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/', 'GuestController@index')->name('guests.index');
         Route::get('/{id}/create', 'GuestController@create')->name('guests.create');
         Route::post('/{id}/store', 'GuestController@store')->name('guests.store');
+        Route::get('/{id}/table/{table_id}/destroy', 'GuestController@destroy')->name('guests.destroy');
+        Route::get('/{id}/edit', 'GuestController@edit')->name('guests.edit');
+        Route::post('/{id}/update', 'GuestController@update')->name('guests.update');
     });
 //    Route::resource('guests', 'GuestController');
 
     Route::resource('users', 'UserController');
+    Route::resource('roles', 'RoleController');
     Route::resource('dishes', 'DishController');
+    Route::get('/asdsad','LayoutController@showTable')->name('layout.showTable');
 });

@@ -71,7 +71,8 @@ class GuestController extends Controller
      */
     public function edit($id)
     {
-        //
+        $guest = $this->guestService->show($id);
+        return view('guests.edit', compact('guest'));
     }
 
     /**
@@ -83,7 +84,8 @@ class GuestController extends Controller
      */
     public function update(CreateGuestRequest $request, $id)
     {
-        //
+        $this->guestService->update($request, $id);
+        return redirect()->route('guests.index');
     }
 
     /**
@@ -92,8 +94,10 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, $table_id)
     {
-        //
+        $this->tableService->empty($table_id);
+        $this->guestService->destroy($id);
+        return redirect()->route('tables.list');
     }
 }

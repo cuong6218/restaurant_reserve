@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('layouts.master1')
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fas fa-table mr-1"></i>

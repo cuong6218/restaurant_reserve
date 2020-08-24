@@ -19,15 +19,15 @@ class AuthController extends Controller
     {
         return view('users.login');
     }
-    public function login(CreateUserRequest $request)
+    public function login(Request $request)
     {
         $data = [
-            'username' => $request->name,
+            'name' => $request->name,
             'password' => $request->password,
         ];
         if (!Auth::attempt($data))
         {
-            return redirect()->route('users.showLogin');
+            return redirect()->route('auth.showLogin');
         }
         return redirect()->route('layout.index');
 
@@ -35,6 +35,6 @@ class AuthController extends Controller
     public function logout()
     {
         Session::remove('isAuth');
-        return redirect()->route('users.showLogin');
+        return redirect()->route('auth.showLogin');
     }
 }

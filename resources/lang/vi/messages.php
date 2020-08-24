@@ -4,14 +4,14 @@ return [
     'no-data' => 'Không có dữ liệu',
     'update' => 'Cập nhật',
     'delete' => 'Xóa',
-
+    'cancel' => 'Hủy đặt bàn',
+    'status' => 'Trạng thái',
 
     //tables
     'table' => 'Bàn',
     'table-add' => 'Thêm bàn',
     'table-list' => 'Danh sách bàn',
     'table-name' => 'Tên bàn',
-    'table-status' => 'Trạng thái',
     'table-booking' => 'Đặt bàn',
     'form-add-table' => 'Form thêm bàn',
 
@@ -26,6 +26,7 @@ return [
 
     //guests
     'guest-add' => 'Thêm thực khách',
+    'guest-update' => 'Cập nhật thực khách',
     'guest-list' => 'Danh sách thực khách',
     'guest-name' => 'Tên',
     'guest-phone' => 'SĐT',
@@ -33,6 +34,9 @@ return [
     'guest-number' => 'Số khách',
     'booking-date' => 'Ngày đặt bàn',
     'form-booking' => 'Form đặt bàn',
+    'guest-booking' => 'Danh sách thực khách đặt bàn',
+    'form-update-guest' => 'Form cập nhật thực khách',
+
 
     //users
     'user-register' => 'Đăng ký',
@@ -43,4 +47,10 @@ return [
     'user-email' => 'Thư điện tử',
     'form-register' => 'Form Đăng ký',
     'form-update-user' => 'Form cập nhật người dùng',
+
+    //roles
+    'role-add' => 'Thêm quyền',
+    'role-list' => 'Danh sách quyền',
+    'role-name' => 'Tên',
+    'form-add-role' => 'Form thêm quyền',
 ];

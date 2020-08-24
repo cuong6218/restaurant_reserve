@@ -1,16 +1,17 @@
 @extends('layouts.master1')
 @section('content')
     <div class="container-fluid">
+
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid">
-                    <h1 class="mt-4"> @lang('messages.dish-list')</h1>
+                    <h1 class="mt-4"> @lang('messages.role-list')</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active"> @lang('messages.dish-list')</li>
+                        <li class="breadcrumb-item active"> @lang('messages.role-list')</li>
                     </ol>
                     <div class="btn btn-outline-success mt-3 mb-3">
-                        <a href="{{route('dishes.create')}}">@lang('messages.dish-add')</a>
+                        <a href="{{route('roles.create')}}">@lang('messages.role-add')</a>
                     </div>
                     <div class="card mb-4">
 
@@ -24,25 +25,14 @@
                                     <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>@lang('messages.dish-name')</th>
-                                        <th>@lang('messages.dish-price')</th>
-                                        <th colspan="2"></th>
+                                        <th>@lang('messages.role-name')</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @forelse($dishes as $key => $dish)
+                                    @forelse($roles as $key => $role)
                                         <tr>
                                             <td>{{$key + 1}}</td>
-                                            <td>{{$dish->name}}</td>
-                                            <td>$ {{$dish->price}}</td>
-                                            <td><a href="{{route('dishes.edit', $dish->id)}}" class="btn btn-primary">@lang('messages.update')</a> </td>
-                                            <td>
-                                                <form method="post" action="{{route('dishes.destroy', $dish->id)}}">
-                                                    @csrf
-                                                    <input type="hidden" name="_method" value="DELETE">
-                                                    <button type="submit" class="btn btn-danger"><span data-feather="trash-2"></span>&nbsp;@lang('messages.delete')</button>
-                                                </form>
-                                            </td>
+                                            <td>{{$role->name}}</td>
                                         </tr>
                                     @empty
                                         <tr>
@@ -51,7 +41,6 @@
                                     @endforelse
                                     </tbody>
                                 </table>
-                                {{$dishes->links()}}
                             </div>
                         </div>
                     </div>

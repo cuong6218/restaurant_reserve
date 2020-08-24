@@ -5,7 +5,7 @@ namespace App\Http\Repositories;
 
 
 use App\Guest;
-
+use Carbon\Carbon;
 class GuestRepository
 {
     protected $guest;
@@ -29,8 +29,10 @@ class GuestRepository
     {
         return $this->guest->findOrFail($id);
     }
-    public function destroy($id)
-    {
-        $this->guest->destroy($id);
-    }
+
+//    public function destroy($id)
+//    {
+//        $guest = $this->guest->find($id);
+//        $guest->status = 'canceled';
+//    }
 }
