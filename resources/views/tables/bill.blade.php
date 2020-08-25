@@ -30,7 +30,7 @@
                     @endforelse
                     <tr>
                         <td>Total:</td>
-                        <td>$ 0</td>
+                        <td colspan="2">$ {{$totalPrice}}</td>
                     </tr>
                     </tbody>
                 </table>

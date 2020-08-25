@@ -125,7 +125,12 @@ class TableController extends Controller
     public function showBill($id)
     {
         $table = $this->tableService->show($id);
-        return view('tables.bill', compact('table'));
+        $totalPrice = 0;
+        foreach($table->dishes as $dish)
+        {
+            $totalPrice += $dish->price;
+        }
+        return view('tables.bill', compact('table', 'totalPrice'));
     }
     public function pay($id)
     {
