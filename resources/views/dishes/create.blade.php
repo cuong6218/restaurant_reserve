@@ -7,7 +7,7 @@
                 @lang('messages.form-add-dish')
             </div>
             <div class="card-body">
-                <form method="post" action="{{route('dishes.store')}}">
+                <form method="post" action="{{route('dishes.store')}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>@lang('messages.dish-name')</label>
@@ -23,6 +23,10 @@
                     @if($errors->has('price'))
                         <p class="text-danger">{{$errors->first('price')}}</p>
                     @endif
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input type="file" name="image" class="form-control-file">
+                    </div>
                     <button type="submit" class="btn btn-primary">@lang('messages.dish-add')</button>
                 </form>
             </div>

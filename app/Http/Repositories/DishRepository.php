@@ -5,6 +5,7 @@ namespace App\Http\Repositories;
 
 
 use App\Dish;
+use Illuminate\Support\Facades\DB;
 
 class DishRepository
 {
@@ -32,5 +33,10 @@ class DishRepository
     public function destroy($id)
     {
         $this->dish->destroy($id);
+    }
+    public function pay($id)
+    {
+        $dishes =  DB::table('dishes')->where('table_id', $id);
+        $dishes->delete();
     }
 }

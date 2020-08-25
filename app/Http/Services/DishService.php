@@ -6,7 +6,7 @@ namespace App\Http\Services;
 
 use App\Dish;
 use App\Http\Repositories\DishRepository;
-
+use Illuminate\Support\Facades\Storage;
 class DishService
 {
     protected $dishRepo;
@@ -25,9 +25,16 @@ class DishService
     public function store($request)
     {
         $dish = new Dish();
-        $dish->name = $request->name;
-        $dish->price = $request->price;
+        $data = $request->all();
+        //upload file
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $path = $image->store('images', 'public');
+            $data['image'] = $path;
+        //fill data
+        $dish->fill($data);
         $this->dishRepo->save($dish);
+        }
     }
     public function show($id)
     {
@@ -36,12 +43,28 @@ class DishService
     public function update($request, $id)
     {
         $dish = $this->dishRepo->show($id);
-        $dish->name = $request->name;
-        $dish->price = $request->price;
+        $data = $request->all();
+        //update image
+        if ($request->hasFile('image')) {
+            // delete current image
+            $currentImg = $dish->image;
+            if ($currentImg) {
+                Storage::delete('/public/' . $currentImg);
+            }
+            //update new image
+            $image = $request->file('image');
+            $path = $image->store('images', 'public');
+            $data['image'] = $path;
+        }
+        $dish->fill($data);
         $this->dishRepo->save($dish);
     }
     public function destroy($id)
     {
         $this->dishRepo->destroy($id);
+    }
+    public function pay($id)
+    {
+        $this->dishRepo->pay($id);
     }
 }

@@ -77,6 +77,7 @@ class TableService
     public function addDish($request,$id)
     {
         $table = $this->tableRepo->show($id);
+        $table->dishes = $request->dish;
         $table->dishes()->sync($request->dish);
     }
 

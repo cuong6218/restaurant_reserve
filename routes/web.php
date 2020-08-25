@@ -34,6 +34,8 @@ Route::middleware('checkLang')->prefix('admin')->group(function ()
         Route::get('/list-seated', 'TableController@showSeated')->name('tables.showSeated');
         Route::get('/list-empty', 'TableController@showEmpty')->name('tables.showEmpty');
         Route::post('/{id}/add-dish', 'TableController@addDish')->name('tables.addDish');
+        Route::get('/{id}/show-bill', 'TableController@showBill')->name('tables.showBill');
+        Route::get('/{id}/pay', 'TableController@pay')->name('tables.pay');
     });
     Route::resource('tables', 'TableController');
 

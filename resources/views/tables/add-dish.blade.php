@@ -7,7 +7,7 @@
                 @lang('messages.form-add-dish')
             </div>
             <div class="card-body">
-                <form method="post" action="{{route('tables.addDish', $id)}}">
+                <form method="post" action="{{route('tables.addDish', $table->id)}}">
                     @csrf
                     <div class="form-group">
                         <label>Dishes select</label>

@@ -121,6 +121,17 @@ class TableController extends Controller
         $tables = $this->tableService->showEmpty();
         return view('tables.list', compact('tables'));
     }
+    public function showBill($id)
+    {
+        $table = $this->tableService->show($id);
+        return view('tables.bill', compact('table'));
+    }
+    public function pay($id)
+    {
+        $this->tableService->empty($id);
+        $this->dishService->pay($id);
+        return redirect()->route('tables.list');
+    }
 
     public function booking($id)
     {
@@ -129,9 +140,9 @@ class TableController extends Controller
     }
     public function seated($id)
     {
+        $table = $this->tableService->show($id);
         $dishes = $this->dishService->getAll();
-        $this->tableService->seated($id);
-        return view('tables.add-dish', compact('dishes', 'id'));
+        return view('tables.add-dish', compact('dishes', 'table'));
     }
     public function empty($id)
     {
@@ -141,6 +152,7 @@ class TableController extends Controller
 
     public function addDish(Request $request, $id)
     {
+        $this->tableService->seated($id);
         $this->tableService->addDish($request, $id);
         return redirect()->route('tables.list');
     }

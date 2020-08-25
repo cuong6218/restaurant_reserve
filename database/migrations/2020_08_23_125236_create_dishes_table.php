@@ -17,6 +17,8 @@ class CreateDishesTable extends Migration
             $table->id();
             $table->string('name');
             $table->float('price');
+            $table->string('image');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

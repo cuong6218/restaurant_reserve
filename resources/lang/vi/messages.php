@@ -19,6 +19,7 @@ return [
     'dish-list' => 'Danh sách món ăn',
     'dish-name' => 'Tên món ăn',
     'dish-price' => 'Giá tiền',
+    'dish-image' => 'Ảnh',
     'dish-add' => 'Thêm món ăn',
     'form-add-dish' => 'Form thêm món ăn',
     'form-update-dish' => 'Form cập nhật thông tin món ăn',

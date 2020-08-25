@@ -19,6 +19,7 @@
         'dish-list' => 'List dish',
         'dish-name' => 'Name',
         'dish-price' => 'Price',
+        'dish-image' => 'Image',
         'dish-add' => 'Add dish',
         'form-add-dish' => 'Form add dish',
         'form-update-dish' => 'Form update dish',

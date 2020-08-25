@@ -1,20 +1,20 @@
 @extends('layouts.master1')
 @section('content')
-{{--    <div class="row">--}}
-{{--        <div class="col-md-3">--}}
-{{--        <a href="{{route('tables.list')}}" class="btn btn-light">List all</a></div>--}}
-{{--        <a href="{{route('tables.showSeated')}}" class="btn btn-info">Seated</a>--}}
-{{--        <a href="{{route('tables.showEmpty')}}" class="btn btn-secondary">Empty</a>--}}
-{{--        <a href="{{route('tables.showBooking')}}" class="btn btn-success">Booking</a>--}}
-{{--    </div>--}}
-<div class="dropdown">
-
-</div>
+    <div class="container-fluid">
+        <h1 class="mt-4"> List table 2D</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+            <li class="breadcrumb-item active"> List table 2D</li>
+        </ol>
         <div class="card mb-4  mt-3">
             <div class="card-header">
-                <i class="fas fa-table mr-1"></i>
+{{--                <i class="fas fa-table mr-1"></i>--}}
 
-                @lang('messages.table-list')
+{{--                @lang('messages.table-list')--}}
+                <a href="{{route('tables.list')}}" class="btn btn-warning mr-3">List all</a>
+                <a href="{{route('tables.showSeated')}}" class="btn btn-info mr-3">Seated</a>
+                <a href="{{route('tables.showEmpty')}}" class="btn btn-secondary mr-3">Empty</a>
+                <a href="{{route('tables.showBooking')}}" class="btn btn-primary mr-3">Booking</a>
             </div>
             <div class="card-body">
                 @forelse($tables as $table)
@@ -25,7 +25,20 @@
                                         <a href="{{route('tables.show', $table->id)}}">
                                             <i class="cil-dinner" style="font-size: 20px"></i>@lang('messages.table'): {{$table->name}}</a>
                                 </div>
-                                <div>{{$table->status}}</div>
+                                <div>
+                                    <p class="
+                                        @switch($table->status)
+                                            @case('seated')
+                                                text-info
+                                                @break
+                                            @case('booking')
+                                                text-success
+                                                @break
+                                            @default
+                                                text-dark
+                                        @endswitch
+                                        ">{{$table->status}}</p>
+                                </div>
                                 <div class="progress progress-xs my-2">
 
                                 </div>
@@ -40,7 +53,7 @@
 {{--                                        <span class="text-muted"><a href="{{route('guests.create', $table->id)}}"><i class='fas fa-paper-plane' style='font-size:24px'></i></a></span>--}}
 {{--                                    </label>--}}
                                     <label class="btn btn-warning">
-                                        <span class="text-muted"><a href="#"><i class='fab fa-btc' style='font-size:24px'></i></a></span>
+                                        <span class="text-muted"><a href="{{route('tables.showBill', $table->id)}}"><i class='fab fa-btc' style='font-size:24px'></i></a></span>
                                     </label>
                                 </div>
 {{--                                <span class="text-muted"><a href="{{route('tables.seated', $table->id)}}">Seated |</a> </span>--}}
@@ -53,5 +66,6 @@
                 @endforelse
             </div>
         </div>
+    </div>
     </div>
 @endsection

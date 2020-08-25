@@ -10,17 +10,13 @@
                         <li class="breadcrumb-item active"> @lang('messages.guest-list')</li>
                     </ol>
                     <div class="card mb-4">
-
                         <div class="card-header">
                             <i class="fas fa-table mr-1"></i>
                             Table
                         </div>
-                        <div class="dropdown-menu">
-                            <span>column configuration</span>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-striped" width="100%" cellspacing="0">
+                                <table class="table table-striped text-center" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
                                         <th>#</th>

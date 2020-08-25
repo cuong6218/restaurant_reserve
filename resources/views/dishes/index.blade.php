@@ -20,12 +20,13 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-striped" width="100%" cellspacing="0">
+                                <table class="table table-striped text-center" width="100%" cellspacing="0">
                                     <thead>
                                     <tr>
                                         <th>#</th>
                                         <th>@lang('messages.dish-name')</th>
                                         <th>@lang('messages.dish-price')</th>
+                                        <th>@lang('messages.dish-image')</th>
                                         <th colspan="2"></th>
                                     </tr>
                                     </thead>
@@ -35,6 +36,7 @@
                                             <td>{{$key + 1}}</td>
                                             <td>{{$dish->name}}</td>
                                             <td>$ {{$dish->price}}</td>
+                                            <td><img src="{{$dish->image}}" style="width: 200px; height: 70px" alt="No image"></td>
                                             <td><a href="{{route('dishes.edit', $dish->id)}}" class="btn btn-primary">@lang('messages.update')</a> </td>
                                             <td>
                                                 <form method="post" action="{{route('dishes.destroy', $dish->id)}}">

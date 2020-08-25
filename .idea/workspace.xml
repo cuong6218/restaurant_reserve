@@ -23,17 +23,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="303d0ab4-bc4c-4512-9577-cb08fc5a34e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/tables/bill.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Guest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Guest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Dish.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TableController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/GuestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/GuestRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Services/GuestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/GuestService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_081256_create_guests_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_081256_create_guests_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/DishRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/DishRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/DishService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/DishService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Services/TableService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Services/TableService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_125236_create_dishes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_125236_create_dishes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_23_133720_create_table_dish_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/en/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/vi/messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/vi/messages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guests/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guests/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dishes/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dishes/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/guests/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guests/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tables/detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master1.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master1.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tables/add-dish.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/add-dish.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tables/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/tables/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tables/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +206,9 @@
       <workItem from="1598157378294" duration="24976000" />
       <workItem from="1598185984685" duration="10632000" />
       <workItem from="1598229688562" duration="16036000" />
-      <workItem from="1598250422973" duration="4778000" />
+      <workItem from="1598250422973" duration="13707000" />
+      <workItem from="1598303428160" duration="4993000" />
+      <workItem from="1598315581341" duration="332000" />
     </task>
     <servers />
   </component>
@@ -220,22 +232,22 @@
       <screen x="0" y="34" width="1600" height="990" />
     </state>
     <state x="533" y="278" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.34.1600.990@0.34.1600.990" timestamp="1598247990801" />
-    <state x="533" y="287" width="524" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598236143199">
+    <state x="533" y="287" width="524" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598305307224">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="533" y="287" width="524" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.34.1600.990@0.34.1600.990" timestamp="1598236143198" />
-    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl" timestamp="1598242394882">
+    <state x="533" y="287" width="524" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.34.1600.990@0.34.1600.990" timestamp="1598305307224" />
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl" timestamp="1598304948795">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl/0.34.1600.990@0.34.1600.990" timestamp="1598242394882" />
+    <state x="583" y="287" width="424" height="490" key="FileChooserDialogImpl/0.34.1600.990@0.34.1600.990" timestamp="1598304948795" />
     <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog" timestamp="1598236365776">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
     <state x="486" y="248" width="617" height="567" key="NewPhpClassDialog/0.34.1600.990@0.34.1600.990" timestamp="1598236365776" />
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598236634682">
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog" timestamp="1598260127262">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
-    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598236634682" />
+    <state x="595" y="454" width="399" height="155" key="NewPhpFileDialog/0.34.1600.990@0.34.1600.990" timestamp="1598260127262" />
     <state x="463" y="250" width="672" height="678" key="search.everywhere.popup" timestamp="1598241477831">
       <screen x="0" y="34" width="1600" height="990" />
     </state>
