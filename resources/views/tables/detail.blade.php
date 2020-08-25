@@ -10,7 +10,7 @@
                 Detail table {{$table->name}}
             </div>
             <div class="card-body">
-                <table class="table table-striped">
+                <table class="table table-striped text-center">
                     <strong>@lang('messages.dish-list')</strong>
                     <thead>
                     <tr>
@@ -28,12 +28,12 @@
                         </tr>
                     @empty
                         <tr>
-                            <td>@lang('messages.no-data')</td>
+                            <td colspan="3">@lang('messages.no-data')</td>
                         </tr>
                     @endforelse
                     </tbody>
                 </table>
-                <table class="table table-striped">
+                <table class="table table-striped text-center">
                     <strong>@lang('messages.guest-booking')</strong>
                     <thead>
                     <tr>
@@ -48,7 +48,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @forelse($table->guests as $key => $guest)
+                    @forelse($guests as $key => $guest)
                         <tr>
                             <td>{{$key + 1}}</td>
                             <td>{{$guest->name}}</td>
@@ -61,7 +61,7 @@
                         </tr>
                     @empty
                         <tr>
-                            <td>@lang('messages.no-data')</td>
+                            <td colspan="9">@lang('messages.no-data')</td>
                         </tr>
                     @endforelse
                     </tbody>

@@ -22,7 +22,8 @@ class CreateGuestsTable extends Migration
             $table->date('booking_date');
             $table->time('time_start');
             $table->time('time_end');
-            $table->string('status');
+            $table->unsignedBigInteger('table_id')->nullable();
+            $table->foreign('table_id')->references('id')->on('tables');
             $table->softDeletes();
             $table->timestamps();
         });

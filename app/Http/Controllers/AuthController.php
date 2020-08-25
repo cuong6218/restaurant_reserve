@@ -10,11 +10,11 @@ use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
-    protected $userService;
-    public function __construct(UserService $userService)
-    {
-        $this->userService = $userService;
-    }
+//    protected $userService;
+//    public function __construct(UserService $userService)
+//    {
+//        $this->userService = $userService;
+//    }
     public function showLogin()
     {
         return view('users.login');

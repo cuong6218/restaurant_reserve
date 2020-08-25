@@ -1,10 +1,7 @@
 @extends('layouts.master1')
 @section('content')
     <div class="container-fluid">
-
-        <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid">
                     <h1 class="mt-4"> @lang('messages.role-list')</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -44,9 +41,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </main>
-        </div>
-    </div>
     </div>
 @endsection

@@ -24,7 +24,7 @@
                         <p class="text-danger">{{$errors->first('price')}}</p>
                     @endif
                     <div class="form-group">
-                        <label>Image</label>
+                        <label>@lang('messages.dish-image')</label>
                         <input type="file" name="image" class="form-control-file">
                     </div>
                     <button type="submit" class="btn btn-primary">@lang('messages.dish-add')</button>

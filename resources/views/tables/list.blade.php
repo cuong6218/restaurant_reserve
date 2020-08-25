@@ -1,20 +1,17 @@
 @extends('layouts.master1')
 @section('content')
     <div class="container-fluid">
-        <h1 class="mt-4"> List table 2D</h1>
+        <h1 class="mt-4">@lang('messages.table-list') 2D</h1>
         <ol class="breadcrumb mb-4">
             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-            <li class="breadcrumb-item active"> List table 2D</li>
+            <li class="breadcrumb-item active">@lang('messages.table-list') 2D</li>
         </ol>
         <div class="card mb-4  mt-3">
             <div class="card-header">
-{{--                <i class="fas fa-table mr-1"></i>--}}
-
-{{--                @lang('messages.table-list')--}}
                 <a href="{{route('tables.list')}}" class="btn btn-warning mr-3">List all</a>
                 <a href="{{route('tables.showSeated')}}" class="btn btn-info mr-3">Seated</a>
                 <a href="{{route('tables.showEmpty')}}" class="btn btn-secondary mr-3">Empty</a>
-                <a href="{{route('tables.showBooking')}}" class="btn btn-primary mr-3">Booking</a>
+                <a href="{{route('tables.showBooking')}}" class="btn btn-success mr-3">Booking</a>
             </div>
             <div class="card-body">
                 @forelse($tables as $table)
@@ -46,18 +43,13 @@
                                     <label class="btn btn-info">
                                         <span class="text-muted"><a href="{{route('tables.seated', $table->id)}}"><i class='fas fa-utensils' style='font-size:24px; color: floralwhite'></i></a> </span>
                                     </label>
-                                    <label class="btn btn-secondary">
-                                       <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}" target="_blank"><i class='fas fa-frown' style='font-size:24px; color: white'></i></a></span>
-                                    </label>
-{{--                                    <label class="btn btn-success">--}}
-{{--                                        <span class="text-muted"><a href="{{route('guests.create', $table->id)}}"><i class='fas fa-paper-plane' style='font-size:24px'></i></a></span>--}}
+{{--                                    <label class="btn btn-secondary">--}}
+{{--                                       <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}" target="_blank"><i class='fas fa-frown' style='font-size:24px; color: white'></i></a></span>--}}
 {{--                                    </label>--}}
                                     <label class="btn btn-warning">
                                         <span class="text-muted"><a href="{{route('tables.showBill', $table->id)}}"><i class='fab fa-btc' style='font-size:24px'></i></a></span>
                                     </label>
                                 </div>
-{{--                                <span class="text-muted"><a href="{{route('tables.seated', $table->id)}}">Seated |</a> </span>--}}
-{{--                                <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}">Empty</a> </span>--}}
                             </div>
                         </div>
                     </div>

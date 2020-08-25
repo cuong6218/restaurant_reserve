@@ -1,9 +1,7 @@
 @extends('layouts.master1')
 @section('content')
     <div class="container-fluid">
-        <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid">
                     <h1 class="mt-4"> @lang('messages.dish-list')</h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -36,7 +34,10 @@
                                             <td>{{$key + 1}}</td>
                                             <td>{{$dish->name}}</td>
                                             <td>$ {{$dish->price}}</td>
-                                            <td><img src="{{$dish->image}}" style="width: 200px; height: 70px" alt="No image"></td>
+                                                <td>
+{{--                                                    <img src="{{asset('storage/'.$dish->image)}}" style="width: 200px; height: 70px" alt="No image"  >--}}
+                                                    <img src="{{$dish->image}}" style="width: 200px; height: 75px" alt="No image">
+                                                </td>
                                             <td><a href="{{route('dishes.edit', $dish->id)}}" class="btn btn-primary">@lang('messages.update')</a> </td>
                                             <td>
                                                 <form method="post" action="{{route('dishes.destroy', $dish->id)}}">
@@ -48,7 +49,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td>@lang('messages.no-data')</td>
+                                            <td colspan="6">@lang('messages.no-data')</td>
                                         </tr>
                                     @endforelse
                                     </tbody>
@@ -57,9 +58,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </main>
-        </div>
-    </div>
     </div>
 @endsection

@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Dish extends Model
 {
+    protected $fillable = [
+        'name', 'price', 'image',
+    ];
     use SoftDeletes;
     protected $dates = ['delete_at'];
     public function tables()

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Services\GuestService;
 use App\Http\Services\TableService;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateGuestRequest;
 use Illuminate\Support\Facades\DB;
@@ -77,7 +78,6 @@ class GuestController extends Controller
         $guest = $this->guestService->show($id);
         return view('guests.edit', compact('guest'));
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -97,15 +97,8 @@ class GuestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, $table_id)
+    public function destroy($id)
     {
-//        $guest = $this->guestService->getAll()->lastest();
-//        $this->tableService->show($table_id);
-        $guest = DB::table('guests')->latest()->first();
-        if(!$guest)
-        {
-            $this->tableService->empty($table_id);
-        }
         $this->guestService->destroy($id);
         return redirect()->route('tables.list');
     }

@@ -23,19 +23,17 @@ class GuestService
     {
         return $this->guestRepo->getDesc();
     }
-    public function store($request, $table_id)
+    public function store($request, $id)
     {
         $guest = new Guest();
         $guest->fill($request->all());
-        $guest->status = 'booking';
         if (!$request->time_end)
         {
             $time_start = Carbon::parse($request->time_start);
             $guest->time_end = $time_start->addHour(2);
         }
-
         $this->guestRepo->save($guest);
-        $guest->tables()->sync($table_id);
+//        $guest->table()->sync($table_id);
     }
     public function show($id)
     {
@@ -52,5 +50,9 @@ class GuestService
     public function destroy($id)
     {
        $this->guestRepo->destroy($id);
+    }
+    public function detailTable($id)
+    {
+        return $this->guestRepo->detailTable($id);
     }
 }

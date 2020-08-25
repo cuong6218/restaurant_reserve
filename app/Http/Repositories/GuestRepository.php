@@ -6,6 +6,8 @@ namespace App\Http\Repositories;
 
 use App\Guest;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+
 class GuestRepository
 {
     protected $guest;
@@ -34,7 +36,11 @@ class GuestRepository
     public function destroy($id)
     {
         $guest = Guest::find($id);
-        $guest->status = 'canceled';
         $guest->delete();
+    }
+    public function detailTable($id)
+    {
+
+        return Guest::where('table_id', $id)->paginate(5);
     }
 }

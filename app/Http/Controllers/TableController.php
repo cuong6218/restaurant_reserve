@@ -63,8 +63,9 @@ class TableController extends Controller
      */
     public function show($id)
     {
+        $guests = $this->guestService->detailTable($id);
         $table = $this->tableService->show($id);
-        return view('tables.detail', compact('table'));
+        return view('tables.detail', compact('table', 'guests'));
     }
 
     /**

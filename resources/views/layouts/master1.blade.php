@@ -118,5 +118,6 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
     <script src="assets/demo/datatables-demo.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="/js/main.js"></script>
     </body>
 </html>

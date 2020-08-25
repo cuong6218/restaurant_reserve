@@ -1,9 +1,8 @@
 @extends('layouts.master1')
 @section('content')
     <div class="container-fluid">
-    <div id="layoutSidenav_content">
+{{--    <div id="layoutSidenav_content">--}}
         <main>
-            <div class="container-fluid">
                 <h1 class="mt-4"> @lang('messages.table-list')</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -37,7 +36,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td>@lang('messages.no-data')</td>
+                                        <td colspan="3">@lang('messages.no-data')</td>
                                     </tr>
                                 @endforelse
                                 </tbody>
@@ -46,10 +45,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </main>
-    </div>
-    </div>
+{{--    </div>--}}
     </div>
 @endsection
 

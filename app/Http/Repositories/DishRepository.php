@@ -36,7 +36,7 @@ class DishRepository
     }
     public function pay($id)
     {
-        $dishes =  DB::table('dishes')->where('table_id', $id);
+        $dishes = $this->dish->findOrFail($id);
         $dishes->delete();
     }
 }
