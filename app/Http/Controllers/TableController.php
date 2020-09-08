@@ -132,12 +132,7 @@ class TableController extends Controller
         }
         return view('tables.bill', compact('table', 'totalPrice'));
     }
-    public function pay($id)
-    {
-        $this->tableService->empty($id);
-        $this->dishService->pay($id);
-        return redirect()->route('tables.list');
-    }
+
 
     public function booking($id)
     {
@@ -160,6 +155,13 @@ class TableController extends Controller
     {
         $this->tableService->seated($id);
         $this->tableService->addDish($request, $id);
+        return redirect()->route('tables.list');
+    }
+
+    public function pay($id)
+    {
+        $this->tableService->empty($id);
+        $this->dishService->pay($id);
         return redirect()->route('tables.list');
     }
 }

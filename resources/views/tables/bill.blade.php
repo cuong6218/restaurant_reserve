@@ -29,8 +29,10 @@
                         </tr>
                     @endforelse
                     <tr>
-                        <td>Total:</td>
-                        <td colspan="2">$ {{$totalPrice}}</td>
+                        <td>
+                            <strong style="font-size: 30px">@lang('messages.total-price'):</strong>
+                        </td>
+                        <td colspan="2"><p style="font-size: 30px">$ {{$totalPrice}}</p></td>
                     </tr>
                     </tbody>
                 </table>

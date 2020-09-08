@@ -99,6 +99,7 @@ class GuestController extends Controller
      */
     public function destroy($id)
     {
+        $this->tableService->empty($id);
         $this->guestService->destroy($id);
         return redirect()->route('tables.list');
     }

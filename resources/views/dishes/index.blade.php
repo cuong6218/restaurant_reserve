@@ -7,8 +7,8 @@
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                         <li class="breadcrumb-item active"> @lang('messages.dish-list')</li>
                     </ol>
-                    <div class="btn btn-outline-success mt-3 mb-3">
-                        <a href="{{route('dishes.create')}}">@lang('messages.dish-add')</a>
+                    <div class=" mt-3 mb-3">
+                        <a href="{{route('dishes.create')}}" class="btn btn-outline-success">@lang('messages.dish-add')</a>
                     </div>
                     <div class="card mb-4">
 

@@ -12,6 +12,7 @@ return [
     'table-add' => 'Thêm bàn',
     'table-list' => 'Danh sách bàn',
     'table-name' => 'Tên bàn',
+    'total-price' => 'Tổng tiền',
     'table-booking' => 'Đặt bàn',
     'form-add-table' => 'Form thêm bàn',
 

@@ -7,8 +7,8 @@
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                         <li class="breadcrumb-item active"> @lang('messages.role-list')</li>
                     </ol>
-                    <div class="btn btn-outline-success mt-3 mb-3">
-                        <a href="{{route('roles.create')}}">@lang('messages.role-add')</a>
+                    <div class=" mt-3 mb-3">
+                        <a href="{{route('roles.create')}}" class="btn btn-outline-success">@lang('messages.role-add')</a>
                     </div>
                     <div class="card mb-4">
 

@@ -6,12 +6,13 @@
         'update' => 'Update',
         'cancel' => 'Cancel',
         'status' => 'Status',
+
         //tables
         'table' => 'Table',
         'table-add' => 'Add table',
         'table-list' => 'List table',
         'table-name' => 'Name',
-
+        'total-price' => 'Total price',
         'table-booking' => 'Booking',
         'form-add-table' => 'Form add table',
 

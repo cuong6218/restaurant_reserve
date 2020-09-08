@@ -37,15 +37,14 @@
                                         ">{{$table->status}}</p>
                                 </div>
                                 <div class="progress progress-xs my-2">
-
                                 </div>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-info">
                                         <span class="text-muted"><a href="{{route('tables.seated', $table->id)}}"><i class='fas fa-utensils' style='font-size:24px; color: floralwhite'></i></a> </span>
                                     </label>
-{{--                                    <label class="btn btn-secondary">--}}
-{{--                                       <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}" target="_blank"><i class='fas fa-frown' style='font-size:24px; color: white'></i></a></span>--}}
-{{--                                    </label>--}}
+                                    <label class="btn btn-secondary">
+                                       <span class="text-muted"><a href="{{route('tables.empty', $table->id)}}" target="_blank"><i class='fas fa-frown' style='font-size:24px; color: white'></i></a></span>
+                                    </label>
                                     <label class="btn btn-warning">
                                         <span class="text-muted"><a href="{{route('tables.showBill', $table->id)}}"><i class='fab fa-btc' style='font-size:24px'></i></a></span>
                                     </label>

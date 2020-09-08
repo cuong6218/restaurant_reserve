@@ -19,7 +19,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = $this->dishService->getDesc();
+        $dishes = $this->dishService->getTrash();
         return view('dishes.index', compact('dishes'));
     }
 

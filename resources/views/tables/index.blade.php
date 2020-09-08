@@ -8,8 +8,8 @@
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                     <li class="breadcrumb-item active"> @lang('messages.table-list')</li>
                 </ol>
-                <div class="btn btn-outline-success mt-3 mb-3">
-                    <a href="{{route('tables.create')}}">@lang('messages.table-add')</a>
+                <div class=" mt-3 mb-3">
+                    <a href="{{route('tables.create')}}" class="btn btn-outline-success">@lang('messages.table-add')</a>
                 </div>
                 <div class="card mb-4">
 

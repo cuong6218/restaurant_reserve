@@ -63,6 +63,10 @@ class DishService
     {
         $this->dishRepo->destroy($id);
     }
+    public function getTrash()
+    {
+        return $this->dishRepo->getTrash();
+    }
     public function pay($id)
     {
         $this->dishRepo->pay($id);

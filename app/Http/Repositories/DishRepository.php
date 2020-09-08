@@ -34,6 +34,10 @@ class DishRepository
     {
         $this->dish->destroy($id);
     }
+    public function getTrash()
+    {
+        return Dish::withTrashed()->paginate(5);
+    }
     public function pay($id)
     {
         $dishes = $this->dish->findOrFail($id);
